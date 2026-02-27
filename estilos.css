@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'VT323', monospace;
+    background: radial-gradient(circle at center, #003B47 0%, #022B33 70%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* === CUBO PRINCIPAL === */
+
+.main-box {
+    width: 80vw;
+    height: 80vh;
+    background-color: #003B47;
+    border: 4px solid #62AFB5;
+    display: flex;
+    flex-direction: column;
+    color: #B0B7A1;
+    position: relative;
+    box-shadow:
+        12px 12px 0px #0C4F59,
+        24px 24px 0px #022B33;
+}
+
+/* === MENÚ === */
+
+nav {
+    background-color: #0C4F59;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    border-bottom: 3px solid #62AFB5;
+}
+
+nav a {
+    text-decoration: none;
+    color: #B0B7A1;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #62AFB5;
+    text-shadow: 0 0 8px #39E0D0;
+}
+
+/* === CONTENIDO GENERAL === */
+
+.content {
+    padding: 60px;
+    font-size: 1.8rem;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #62AFB5;
+}
+
+/* === EQUIPO === */
+
+.equipo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Cada operario es una fila */
+.equipo-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Imagen izquierda */
+.equipo-item img {
+    width: 250px;
+    height: 250px;
+    border: 3px solid #62AFB5;
+    flex-shrink: 0;
+}
+
+/* Texto derecha */
+.equipo-info {
+    flex: 1;
+}
+
+/* === SERVICIOS === */
+
+.servicios img {
+    width: 100%;
+    margin: 30px 0;
+    border: 3px solid #62AFB5;
+}
+
+/* === RESEÑAS === */
+
+.resena {
+    background-color: #0C4F59;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 5px solid #62AFB5;
+}
+
+.images-servicios {
+    border: 3px solid #62AFB5;
+
+}
+
+/* === GLOW === */
+
+@keyframes sculkPulse {
+    0% { box-shadow: 0 0 10px #62AFB5; }
+    50% { box-shadow: 0 0 25px #39E0D0; }
+    100% { box-shadow: 0 0 10px #62AFB5; }
+}
+
+.main-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    animation: sculkPulse 4s infinite;
+}
