@@ -3,38 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <title>Servicios Ancient City</title>
+
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="estilos.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'VT323', monospace;
+    background-color: #022B33;
+    color: #B0B7A1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+button {
+    background-color: #62AFB5;
+    color: #022B33;
+    border: 3px solid #0C4F59;
+    padding: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 40px;
+    width: 200px;
+    height: 100px;
+    font-family: 'VT323', monospace;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #B0B7A1;
+    transform: scale(1.05);
+}
+</style>
 </head>
 
 <body>
 
-<div class="main-box">
+<div class="container">
+    <h1>
+        Servicios de limpieza de Ancient Cities:<br>
+        profesionales en extracción de skull<br>
+        y terminación de Wardens.
+    </h1>
 
-<nav>
-    <a href="index.html">INICIO</a>
-    <a href="equipo.html">EL EQUIPO</a>
-    <a href="servicios.html">LOS SERVICIOS</a>
-    <a href="resenas.html">CASOS DE ÉXITO</a>
-    <a href="contacto.html">CONTACTO</a>
-</nav>
-
-<div class="content">
-    <h2>Operativa certificada en Deep Dark</h2>
-
-    <p>
-        Unidad especializada en limpieza integral de Ancient Cities.
-        Eliminación estratégica de sculk, neutralización controlada de Wardens
-        y restauración estructural sin activación de sensores.
-    </p>
-
-    
-    <h3>Más de 100 intervenciones sin invocar entidades hostiles.</h3>
-
-</div>
-
-<div class="landing">
-    <p><</p>
+    <button onclick="window.location.href='servicios.html'">
+        CONTRATAR<br>SERVICIOS
+    </button>
 </div>
 
 </body>
